@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="110 100 420 420">
+  <!-- Adapted from christmas-parcel.svg: close crop, defined edges, no greenery, paper flecks, or tag. -->
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8efdb"/><stop offset="1" stop-color="#d9cbb1"/></linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#be5d50"/><stop offset=".5" stop-color="#9d3d3c"/><stop offset="1" stop-color="#6f2f30"/></linearGradient>
+  </defs>
+  <g transform="translate(-8 -10)" stroke-linejoin="round">
+    <g stroke="#78694e" stroke-width="5">
+      <path d="m145 230 221-66 144 81-221 71Z" fill="#f6eedb"/>
+      <path d="m145 230 144 86v158l-144-91Z" fill="#d7c9ae"/>
+      <path d="m289 316 221-71v158l-221 71Z" fill="url(#paper)"/>
+      <path d="m139 221 227-68 151 84-228 75Z" fill="#f6eedb"/>
+      <path d="m139 221 150 91v19l-150-90Z" fill="#d2c3a7"/>
+      <path d="m289 312 228-75v19l-228 75Z" fill="#e6d9bd"/>
+    </g>
+    <path d="m230 194 35-10 152 86-34 11Z" fill="url(#ribbon)"/>
+    <path d="m383 281 34-11v163l-34 11Z" fill="url(#ribbon)"/>
+    <path d="m203 260 34 20 229-72-35-19Z" fill="url(#ribbon)"/>
+    <path d="m203 260 34 20v164l-34-21Z" fill="#943e3a"/>
+    <path d="M325 225q-96-1-84-51 7-31 41-9 25 14 43 60Z" fill="#782f31"/>
+    <path d="M325 225q-85-10-82-47 7-21 39-2 24 15 43 49Z" fill="url(#ribbon)"/>
+    <path d="M327 225q64-94 97-63 33 36-97 63Z" fill="#762e31"/>
+    <path d="M329 224q65-83 91-58 17 22-91 58Z" fill="url(#ribbon)"/>
+    <path d="M325 222q-29 46-69 49l19-23-26-7q46 1 67-24Z" fill="#aa4b43"/>
+    <path d="M333 225q21 26 70 11l-13 17 24 10q-54 9-88-29Z" fill="url(#ribbon)"/>
+    <path d="m313 216 17-10 17 19-16 13-18-7Z" fill="url(#ribbon)"/>
+  </g>
+</svg>
