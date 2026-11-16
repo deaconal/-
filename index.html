@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173e32">
+  <meta name="description" content="A few things Jacob would love to find under the tree. A personal Christmas wish list, shared with love.">
+  <title>Jacob’s Christmas List</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="items.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="awaiting-entry">
+  <a class="skip-link" href="#wishlist">Skip to the wish list</a>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <audio id="christmas-music" src="jingle-bells.mp3" preload="auto" loop playsinline></audio>
+  <div id="site">
+    <header class="header wrap">
+      <a href="#" class="wordmark" aria-label="Jacob’s Christmas List, home"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span>Jacob’s <i>Christmas</i></span></a>
+      <button class="share-button" id="share"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg><span>Share list</span></button>
+    </header>
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="little-line"></span> CHRISTMAS <span class="christmas-year">2026</span></div>
+          <h1 id="hero-title">Jacob’s<br>Christmas <span>list.</span></h1>
+          <div class="countdown"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span id="countdown">Counting down to Christmas…</span></div>
+        </div>
+        <div class="hero-art"><img src="assets/christmas-parcel.svg" alt="A Christmas gift tied with a red ribbon, evergreen sprigs, and a tag for Jacob" width="620" height="560" fetchpriority="high"></div>
+        <span class="hero-sparkle" aria-hidden="true">✧</span>
+      </section>
+      <section class="wishlist wrap" id="wishlist" aria-labelledby="list-title">
+        <div class="section-heading"><div><h2 id="list-title">The wish list</h2></div><button class="text-button" id="surprise-open"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>Pick for me</span></button></div>
+        <div class="list-bar"><div class="category-row" role="group" aria-label="Filter wishes"><button class="category-button active" data-filter="all" aria-pressed="true">All wishes</button><button class="category-button" data-filter="top" aria-pressed="false">Top wishes <span aria-hidden="true">✧</span></button><button class="category-button" data-filter="saved" aria-pressed="false">Saved <span id="saved-count"></span></button></div><span id="result-count" role="status" aria-live="polite"></span></div>
+        <div class="gift-grid" id="gift-grid"></div>
+        <div class="empty-state" id="empty-state" hidden><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><h3 id="empty-title">A little room for a favorite.</h3><p id="empty-message">Tap the heart on a gift to keep it here. Saved on this device, just for you.</p><button class="text-button" id="reset-filter">See all wishes <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
+      </section>
+      <section class="christmas-message wrap reveal" aria-labelledby="christmas-message-title">
+        <div class="message-star" aria-hidden="true">✧</div>
+        <p class="eyebrow">THE GREATEST GIFT WAS NEVER UNDER A TREE</p>
+        <h2 id="christmas-message-title">Christ, the heart of <em>Christmas.</em></h2>
+        <blockquote>“For unto you is born this day in the city of David a Savior,<br class="desktop-break"> which is Christ the Lord.”</blockquote>
+        <cite>LUKE 2:11</cite>
+      </section>
+    </main>
+    <footer class="footer wrap"><span>With love, Jacob <span class="footer-year">2026</span></span><label class="quiet-mode"><input type="checkbox" id="quiet-mode"><span>Quiet mode</span></label><button id="back-top" class="text-button">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></button></footer>
+  </div>
+  <dialog id="entry-dialog" class="entry-dialog" aria-labelledby="entry-title" aria-describedby="entry-description">
+    <div class="entry-ornament" aria-hidden="true"><span>✧</span></div>
+    <h2 id="entry-title">A little Christmas<br><em>wonderland.</em></h2>
+    <button id="enter" class="button cream">Enter the wonderland <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+    <p class="entry-note">Best enjoyed with the sound on.</p>
+  </dialog>
+  <dialog id="surprise-dialog" class="sheet surprise-sheet" aria-labelledby="surprise-title"><div class="sheet-handle" aria-hidden="true"></div><button class="icon-button close-dialog floating-close" aria-label="Close surprise"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button><p class="eyebrow">A LITTLE CHRISTMAS LUCK</p><h2 id="surprise-title">This one’s a surprise.</h2><p id="surprise-description">Tap the present. See what’s inside.</p><div id="surprise-content"></div></dialog>
+  <dialog id="share-dialog" class="sheet" aria-labelledby="share-title"><div class="sheet-handle" aria-hidden="true"></div><div class="sheet-heading"><h2 id="share-title">Pass the list along.</h2><button class="icon-button close-dialog" aria-label="Close sharing"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><p>Copy this link to share the list.</p><input id="share-url" class="share-url" readonly aria-label="Link to this list"><button class="button green" id="copy-share">Copy link <svg class="icon" aria-hidden="true"><use href="#i-share"/></svg></button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><style>.awaiting-entry #site{filter:none;pointer-events:auto}</style><p class="noscript">Please enable JavaScript to see the gift list.</p></noscript>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 8h18v5H3zM5 13v8h14v-8M12 8v13M12 8H8.5A3.5 3.5 0 1 1 12 4.5Zm0 0h3.5A3.5 3.5 0 1 0 12 4.5Z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6L10 14M10 4H4v16h16v-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  </defs></svg>
+</body>
+</html>
