@@ -61,7 +61,6 @@ window.CHRISTMAS_LIST = {
       "store": "Amazon",
       "info": "Choose 80 cm. For smooth camera moves and time-lapses.",
       "color": "#e6e9e1",
-      "favorite": true,
       "salePrice": 246.99
     },
     {
@@ -132,8 +131,6 @@ window.CHRISTMAS_LIST = {
       "store": "Amazon",
       "info": "Choose the 128GB 3-pack. Used for my drone and X4",
       "color": "#ece9e1",
-      "discountPercent": 10,
-      "salePrice": 80.99
     },
     {
       "id": "watch",
@@ -145,7 +142,7 @@ window.CHRISTMAS_LIST = {
       "imageAlt": "Light grey CMF Watch 3 Pro smartwatch",
       "url": "https://www.amazon.com/dp/B0F66VB1SV?th=1",
       "store": "Amazon",
-      "info": "Choose Light Grey. Literally the main reason I want this is because my current watch has the annoyingly loud buzz vibration",
+      "info": "Light Grey. Literally the main reason I want this is because my current watch has the annoyingly loud buzz vibration and it's so loud and so annoying",
       "color": "#e8ece5",
       "discountPercent": 30,
       "salePrice": 55
