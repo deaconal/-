@@ -62,7 +62,7 @@ window.CHRISTMAS_LIST = {
       "info": "Choose 80 cm. For smooth camera moves and time-lapses.",
       "color": "#e6e9e1",
       "favorite": true,
-      "salePrice": 289.99
+      "salePrice": 246.99
     },
     {
       "id": "keyboard",
@@ -104,7 +104,8 @@ window.CHRISTMAS_LIST = {
       "url": "https://www.amazon.com/dp/B0H3PDYRP1",
       "store": "Amazon",
       "info": "Carbon fiber with the fluid video head and Arca-type quick-release plate.",
-      "color": "#e9e6df"
+      "color": "#e9e6df",
+      "salePrice": 107.09
     },
     {
       "id": "sd-card",
@@ -229,7 +230,8 @@ window.CHRISTMAS_LIST = {
       "url": "https://us.store.bambulab.com/products/pla-basic-filament?id=41078274654344",
       "store": "Bambu Lab",
       "info": "Choose Black (10101), 1 kg, Filament with spool.",
-      "color": "#e9e7e1"
+      "color": "#e9e7e1",
+      "salePrice": 11.69,
     },
     {
       "id": "filament-white",
@@ -243,7 +245,8 @@ window.CHRISTMAS_LIST = {
       "url": "https://us.store.bambulab.com/products/pla-matte?id=41078280159368",
       "store": "Bambu Lab",
       "info": "Choose Ivory White (11100), 1 kg, Filament with spool.",
-      "color": "#eeece6"
+      "color": "#eeece6",
+      "salePrice": 12.34,
     },
     {
       "id": "filament-grey",
@@ -257,7 +260,8 @@ window.CHRISTMAS_LIST = {
       "url": "https://us.store.bambulab.com/products/pla-basic-filament?id=40475106869384",
       "store": "Bambu Lab",
       "info": "Choose Blue Grey (10602), 1 kg, Refill. Get the normal filament refill without a spool.",
-      "color": "#e7e9e4"
+      "color": "#e7e9e4",
+      "salePrice": 9.74,
     }
   ]
 };
